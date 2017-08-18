@@ -1,9 +1,9 @@
 <ul class="cards">
     <li *ngFor = 'let poster of posterList' class="card">
-        <a href=""><img [src] = 'poster.poster_image' />
-        	<div class="text">
-	      		<h3>{{poster.name}}</h3>
-	      	</div>
-	    </a>
+        <img [src] = 'poster.poster_image' />
+    	<div class="text">
+      		<h3>{{poster.name}}</h3>
+      	</div>
+	   
     </li>
 </ul>
