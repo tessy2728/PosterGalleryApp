@@ -1,41 +1,45 @@
-<ul class="list-view">
-	<li>
-		<a uiSref="posters">Romantic Comedy</a>
-	</li>
-	<li>
-		<a href="">Cartoon</a>
-	</li>
-	<li>
-		<a href="">Comedy</a>
-	</li>
-	<li>
-		<a href="">Animation</a>
-	</li>
-	<li>
-		<a href="">Action</a>
-	</li>
-	<li>
-		<a href="">Documentary</a>
-	</li>
-	<li>
-		<a href="">Drama</a>
-	</li>
-	<li>
-		<a href="">Horror</a>
-	</li>
-	<li>
-		<a href="">Romance</a>
-	</li>
-	<li>
-		<a href="">Musical</a>
-	</li>
-	<li>
-		<a href="">Scientific Fiction</a>
-	</li>
-	<li>
-		<a href="">Thriller</a>
-	</li>
-	<li>
-		<a href="">War</a>
-	</li>
-</ul>
+<app-header [title]="pageTitle"></app-header>
+<div class="content">
+	<h2>Please select one category:</h2>
+	<ul class="cards">
+		<li class="page-box" [routerLink] = "['/posters']">
+			<a ><h3>Romantic Comedy</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Cartoon</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Comedy</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Animation</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Action</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Documentary</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Drama</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Horror</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Romance</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Musical</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Scientific Fiction</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>Thriller</h3></a>
+		</li>
+		<li class="page-box">
+			<a href=""><h3>War</h3></a>
+		</li>
+	</ul>
+</div>

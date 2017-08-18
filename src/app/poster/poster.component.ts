@@ -13,7 +13,11 @@ import 'rxjs/add/operator/map';
 
 export class PosterComponent {
     posterList : Poster[];
-    constructor(private posterService : PosterService) {}
+    public pageTitle : string;
+
+    constructor(private posterService : PosterService) {
+    	this.pageTitle = 'Romantic Comedy';
+    }
     ngOnInit(): void {
         this.posterService.getPosterList()
         .subscribe(posterList => this.posterList = posterList.page.content_items.content);
