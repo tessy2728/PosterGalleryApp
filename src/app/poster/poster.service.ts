@@ -7,11 +7,21 @@ import { Poster } from './Poster';
 
 @Injectable()
 export class PosterService {
-    private posterURL = 'json/CONTENTLISTINGPAGE-PAGE1.json';
+    private poster1URL = 'json/CONTENTLISTINGPAGE-PAGE1.json';
+    private poster2URL = 'json/CONTENTLISTINGPAGE-PAGE2.json';
+    private poster3URL = 'json/CONTENTLISTINGPAGE-PAGE3.json';
     constructor(private _http: Http){} 
-    getPosterList() {
-        return this._http.get(this.posterURL) 
+    getPosterList1() {
+        return this._http.get(this.poster1URL) 
         .map((res:Response) => res.json())
         .do(data => console.log(JSON.stringify(data)));
+    }
+    getPosterList2() {
+        return this._http.get(this.poster2URL) 
+        .map((res:Response) => res.json());
+    }
+    getPosterList3() {
+        return this._http.get(this.poster3URL) 
+        .map((res:Response) => res.json());
     }
 }

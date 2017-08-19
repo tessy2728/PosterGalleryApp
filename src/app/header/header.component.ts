@@ -8,8 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input('title') title:string="";
+  txtPosterName : string = ''
+  public backBtn : boolean = false;
+  public searchIcon : boolean = false;
+  public searchMode : boolean = false;
+  public searchTerm : string;
 
-  constructor() { }
+  constructor() { 
+ 	
+  }
 
   ngOnInit() {
   }

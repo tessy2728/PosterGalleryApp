@@ -1,14 +1,16 @@
 <ul class="header">
-	<li>
+	<li class="back-icon" *ngIf="backBtn">
 		<a [routerLink] = "['/categories']"><img src="images/Back.png"></a>
 	</li>
 	<li>
-		<p>
+		<p class="title">
 	  	{{title}}
 		</p>
 	</li>
-	<li>
-		<a href=""><img src="images/search.png"></a>
+	<li class="search-icon" *ngIf="searchIcon" (click)="searchMode = true;">
+		<a><img src="images/search.png"></a>
 	</li>
+	<input type="text" [ngModel]="txtPosterName" placeholder="Search by poster name" class="search-box" *ngIf="searchMode"/>
+	<img src="images/icon-close.png" width="25" height="25" class="close-icon" (click)="searchMode = false;">
 </ul>
 

@@ -1,10 +1,13 @@
 <app-header [title]="pageTitle"></app-header>
 <div class="content">
-	<ul class="cards">
-	    <li *ngFor = 'let poster of posterList' class="card">
-	        <img [src] = 'poster.poster_image' />
+	<ul class="cards" infinite-scroll="loadMore()"
+            [infiniteScrollDistance]="6"
+            [infiniteScrollThrottle]="300"
+            (scrolled)="onScrollDown()">
+	    <li *ngFor = "let poster of posterList" class="card">
+	        <img [src] = 'poster.poster_image' src-fallback="images/placeholder_for_missing_posters.png"/>
 	    	<div class="text">
-	      		<h4 class="ellipsis">{{poster.name}}</h4>
+	      		<p class="poster-title ellipsis">{{poster.name}}</p>
 	      	</div>
 		   
 	    </li>
